@@ -34,8 +34,8 @@ Geliştirilen .NET 8 Web API'sinin bir Asterisk telefon santrali ile uçtan uca 
 Kullanıcıdan gelen ses verisini metne dönüştürme aşamasında birincil tercihim **OpenAI Whisper** (özellikle **Faster-Whisper** implementasyonu) yönündedir.
 
 ### 🎯 Neden Faster-Whisper?
-* **Veri Güvenliği & KVKK:** Tamamen lokal (on-premise) sunucularda çalıştırılabildiği için müşteri verisi şirket dışına çıkmaz; KVKK uyumluluğu tam sağlanır.
-* **Performans & Hız:** Düşük kaliteli telefon hatlarında ve gürültülü ortamlarda Türkçe doğruluk oranı çok yüksektir. GPU hızlandırması ve optimize edilmiş altyapısı sayesinde çıkarım süreleri milisaniyeler seviyesindedir.
+* **Veri Güvenliği & KVKK :** Tamamen lokal (on-premise) sunucularda çalıştırılabildiği için müşteri verisi şirket dışına çıkmaz; KVKK uyumluluğu tam sağlanır.
+* **Performans & Hız :** Düşük kaliteli telefon hatlarında ve gürültülü ortamlarda Türkçe doğruluk oranı çok yüksektir. GPU hızlandırması ve optimize edilmiş altyapısı sayesinde çıkarım süreleri milisaniyeler seviyesindedir.
 * **Sıfır Lisans Maliyeti:** Bulut servislerinin (Google/Azure) aksine açık kaynak kodlu ve tamamen ücretsizdir.
  
 
@@ -44,12 +44,12 @@ Kullanıcıdan gelen ses verisini metne dönüştürme aşamasında birincil ter
 API üzerinden dönen yanıt metninin sese dönüştürülmesi sürecinde, hız ve lokal çalışma gereksinimleri doğrultusunda **Piper TTS** veya **Coqui TTS** modellerini tercih ederim.
 
 ### 🎯 Neden Piper / Coqui TTS?
-* **Düşük Gecikme & Performans:** Özellikle Piper TTS, minimum kaynak tüketimi ve ultra yüksek çıkarım (inference) hızı sayesinde gerçek zamanlı çağrı senaryoları için mükemmel bir optimizasyon sunar.
+* **Düşük Gecikme & Performans :** Özellikle Piper TTS, minimum kaynak tüketimi ve ultra yüksek çıkarım (inference) hızı sayesinde gerçek zamanlı çağrı senaryoları için mükemmel bir optimizasyon sunar.
 * **Sıfır Operasyonel Maliyet (OPEX):** ElevenLabs gibi yüksek lisans maliyeti olan bulut çözümlerinin aksine, tamamen açık kaynaklı ve ücretsizdir.
-* **Müşteri Verisi Güvenliği:** Ses sentezleme süreci kurumun kendi lokal sunucularında tamamlanır; ses dosyaları veya müşteri verileri asla dış dünyaya sızmaz.
-* **Doğal Türkçe Desteği:** Modellerin güncel Türkçe ses setleri, telefon hatlarının kısıtlı frekans aralığında bile oldukça doğal, akıcı ve anlaşılır bir sentezleme sağlar.
+* **Müşteri Verisi Güvenliği :** Ses sentezleme süreci kurumun kendi lokal sunucularında tamamlanır; ses dosyaları veya müşteri verileri asla dış dünyaya sızmaz.
+* **Doğal Türkçe Desteği :** Modellerin güncel Türkçe ses setleri, telefon hatlarının kısıtlı frekans aralığında bile oldukça doğal, akıcı ve anlaşılır bir sentezleme sağlar.
 
-> 💡 **Alternatif Senaryo:** Eğer projenin önceliği maliyet veya veri gizliliği değil de tamamen "insandan ayırt edilemez ses kalitesi" ise, bulut tabanlı **ElevenLabs** mimariye entegre edilebilir. Ancak sürdürülebilirlik ve KVKK odaklı kurumsal projelerde tercihim yerel modellerdir.
+> 💡 **Alternatif Senaryo :** Eğer projenin önceliği maliyet veya veri gizliliği değil de tamamen "insandan ayırt edilemez ses kalitesi" ise, bulut tabanlı **ElevenLabs** mimariye entegre edilebilir. Ancak sürdürülebilirlik ve KVKK odaklı kurumsal projelerde tercihim yerel modellerdir.
  
 
  
