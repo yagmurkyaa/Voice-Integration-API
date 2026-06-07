@@ -80,10 +80,10 @@ Projenin zeka katmanında, yapay zeka modellerini yerel bilgisayarda çalıştı
 
 Sistemin telefon hattı üzerindeki tüm akışı, aşağıdaki basit adımlarla canlı olarak test edilir:
 
-1. **Telefon Bağlantısı:** Bilgisayar veya telefonunuza kurduğunuz **Zoiper** ya da **Linphone** uygulamasını, Asterisk sunucunuza bir SIP hesabı ile bağlayın.
-2. **Arama Başlatma:** Softphone (yazılımsal telefon) üzerinden sistemde tanımlanmış olan test numarasını arayın.
-3. **Sistemin Yanıt Vermesi:** Telefon açıldığında Asterisk çağrıyı karşılar; sesinizi kaydedip bizim .NET API'mize gönderir. API'den gelen cevap sese dönüştürülerek size telefon üzerinden geri okunur.
-4. **Canlı İzleme (Log Takibi):** Tüm bu sürecin (çağrının açılması, API'ye bağlanması ve sesin oynatılması) hatasız ilerlediğini görmek için Asterisk terminal ekranında şu komutu çalıştırarak logları anlık olarak izleyebilirsiniz:
+1. **Telefon Bağlantısı :** Bilgisayar veya telefonunuza kurduğunuz **Zoiper** ya da **Linphone** uygulamasını, Asterisk sunucunuza bir SIP hesabı ile bağlayın.
+2. **Arama Başlatma :** Softphone (yazılımsal telefon) üzerinden sistemde tanımlanmış olan test numarasını arayın.
+3. **Sistemin Yanıt Vermesi :** Telefon açıldığında Asterisk çağrıyı karşılar; sesinizi kaydedip bizim .NET API'mize gönderir. API'den gelen cevap sese dönüştürülerek size telefon üzerinden geri okunur.
+4. **Canlı İzleme (Log Takibi) :** Tüm bu sürecin (çağrının açılması, API'ye bağlanması ve sesin oynatılması) hatasız ilerlediğini görmek için Asterisk terminal ekranında şu komutu çalıştırarak logları anlık olarak izleyebilirsiniz:
    ```bash
    asterisk -rvvv
 
