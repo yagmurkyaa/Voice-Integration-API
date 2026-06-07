@@ -51,20 +51,19 @@ API üzerinden dönen yanıt metninin sese dönüştürülmesi sürecinde, hız 
 
 > 💡 **Alternatif Senaryo :** Eğer projenin önceliği maliyet veya veri gizliliği değil de tamamen "insandan ayırt edilemez ses kalitesi" ise, bulut tabanlı **ElevenLabs** mimariye entegre edilebilir. Ancak sürdürülebilirlik ve KVKK odaklı kurumsal projelerde tercihim yerel modellerdir.
  
-### 🧠 4. Yapay Zeka (LLM) Mimarisi
+### 🧠 4. Yapay Zeka 
 
-Projenin zeka katmanında, **Ollama** ekosistemi üzerinde koşan **Llama 3** (veya donanım kısıtlarına göre **Microsoft Phi-3**) modelleri tercih edilmiştir.
+Projenin zeka katmanında, yapay zeka modellerini yerel bilgisayarda çalıştırmayı sağlayan **Ollama** altyapısı ve akıllı yanıt motoru olarak da **Llama 3** (veya donanım kısıtlarına göre daha hafif olan **Microsoft Phi-3**) modeli tercih ederdim. 
 
 #### 🎯 Neden Ollama + Llama 3?
-* **%100 Yerel Çalışma (On-Premise):** Veri güvenliği ve KVKK regülasyonları gereği model tamamen şirket içi donanımda çalışır; veri asla dışarı sızmaz.
-* **Kolay .NET Entegrasyonu:** Ollama'nın sunduğu standart REST API arabirimi sayesinde, .NET 8 projemiz karmaşık kütüphanelere ihtiyaç duymadan `HttpClient` üzerinden yapay zeka ile doğrudan konuşabilir.
-* **Sıfır Token Maliyeti:** OpenAI veya Anthropic gibi bulut servislerinin aksine "token başına" ücretlendirme yoktur; mevcut donanım kaynakları verimli şekilde kullanılır.
-* **Esnek Ölçekleme:** Donanım kapasitesine göre tek bir konfigürasyon değişikliğiyle Llama 3 (yüksek performans) veya Phi-3 (düşük gecikme/hafif) modelleri arasında geçiş yapılabilir.
+* **%100 Yerel Çalışma (On-Premise) :** Veri güvenliği ve KVKK regülasyonları gereği model tamamen şirket içi donanımda çalışır ; veri asla dışarı sızmaz.
+* **Kolay .NET Entegrasyonu :** Ollama'nın sunduğu standart REST API arabirimi sayesinde, .NET 8 projemiz karmaşık kütüphanelere ihtiyaç duymadan `HttpClient` üzerinden yapay zeka ile doğrudan konuşabilir.
+* **Sıfır Token Maliyeti :** OpenAI veya Anthropic gibi bulut servislerinin aksine "token başına" ücretlendirme yoktur ; mevcut donanım kaynakları verimli şekilde kullanılır.
 
 #### 🔄 Örnek Entegrasyon Akışı
-1. **.NET API:** Gelen metni `POST http://localhost:11434/api/generate` adresine JSON olarak gönderir.
-2. **Ollama:** İsteği yakalar ve yerel GPU/CPU üzerinde modeli koşturarak yanıtı üretir.
-3. **Yanıt:** Üretilen metin, .NET katmanına anında teslim edilir.
+1. **.NET API :** Gelen metni `POST http://localhost:11434/api/generate` adresine JSON olarak gönderir.
+2. **Ollama :** İsteği yakalar ve yerel GPU/CPU üzerinde modeli koşturarak yanıtı üretir.
+3. **Yanıt :** Üretilen metin, .NET katmanına anında teslim edilir.
  
 
 
