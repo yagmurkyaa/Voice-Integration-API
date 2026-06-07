@@ -33,7 +33,7 @@ Ses Nasıl Oynatılır?: Bizim API katmanımızdan dönen yazılı yapay zeka ya
 
 Kullanıcının ses verisini metne dönüştürme aşamasında tercihim OpenAI Whisper (özellikle Faster-Whisper implementasyonu) yönündedir. 
 
-Neden Whisper?: 
+Neden Whisper: 
 
 Lokal ve Güvenli (On-Premise): Verinin şirket dışına çıkmasını engeller. Bu, özellikle müşteri gizliliği ve KVKK uyumluluğu açısından en kritik tercih sebebidir. 
 
@@ -51,13 +51,13 @@ Alternatifler: Bulut mimarisinin zorunlu olduğu veya lokal donanım kısıtın�
 
  
 
-🔊 3. TTS (Text To Speech) Tercihi 
+🔊 3. TTS (Text To Speech) 
 
 API üzerinden dönen metnin seslendirilmesi sürecinde, sistemin hız ve lokal çalışma gereksinimlerine göre Piper TTS veya Coqui TTS modellerini tercih ederim. 
 
-Neden Piper/Coqui TTS?: 
+Neden Piper/Coqui TTS : 
 
-Lokal Performans ve Düşük Gecikme: Özellikle Piper TTS, çok düşük kaynak tüketimi ve yüksek çıkarım hızıyla gerçek zamanlı çağrı merkezi senaryoları için optimize edilmiştir. 
+Lokal Performans ve Düşük Gecikme: Özellikle Piper TTS, çok düşük kaynak tüketimi ve yüksek çıkarım hızıyla gerçek zamanlı çağrı merkezi senaryoları için  optimize edilmiştir. 
 
 Tamamen Açık Kaynak ve Maliyetsiz: ElevenLabs gibi bulut tabanlı, lisans maliyetleri yüksek olan çözümler yerine, tamamen ücretsiz ve açık kaynaklı modeller kullanarak projenin operasyonel maliyetini (OPEX) sıfıra indirir. 
 
@@ -75,11 +75,11 @@ Kurumsal Ölçek: Ancak sürdürülebilirlik, KVKK uyumluluğu ve maliyet yönet
 
  
 
-🧠 4. Yapay Zeka (LLM) Tercihi 
+🧠 4. Yapay Zeka (LLM) 
 
 Projede yapay zeka  için tercihim Ollama ekosistemi üzerinde çalışan Llama 3 (veya kaynak yönetimine bağlı olarak Microsoft Phi-3) modelleridir. 
 
-Neden Ollama + Llama 3?: 
+Neden Ollama + Llama 3: 
 
  
 
@@ -101,11 +101,11 @@ Yanıt: Üretilen metin yanıtı doğrudan .NET katmanına JSON formatında geri
 
 🚀 5. Test ve Kurulum Süreci 
 
-Uygulama Kurulumu 
+Uygulama Kurulumu :
 
 Proje, standart .NET 8 çalışma zamanı üzerinde yapılandırılmıştır. İlk adım olarak ilgili kod deposu yerel ortama kopyalanır (clone). Proje dizininde dotnet restore komutu çalıştırılarak bağımlılıklar tamamlanır ve dotnet run komutu ile uygulama ayağa kaldırılır. API varsayılan olarak http://localhost:5000 adresinde hizmet verir. 
 
-API Test Süreci 
+API Test Süreci :
 
 API'nin kararlılığını test etmek için iki yöntem tercih edilir: 
 
@@ -113,7 +113,7 @@ Swagger Arayüzü: http://localhost:5000/swagger adresi üzerinden endpointler i
 
 Postman: POST /api/chat adresine {"message": "Merhaba"} JSON içeriği gönderilerek sistemin 200 OK yanıtı verip vermediği doğrulanır. 
 
-Asterisk Entegrasyonu Testi 
+Asterisk Entegrasyonu Testi :
 
 Sistemin telefon hattı üzerindeki davranışı şu şekilde doğrulanır: 
 
