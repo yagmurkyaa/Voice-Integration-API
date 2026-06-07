@@ -35,15 +35,8 @@ Kullanıcıdan gelen ses verisini metne dönüştürme aşamasında birincil ter
 
 ### 🎯 Neden Faster-Whisper?
 * **Veri Güvenliği & KVKK:** Tamamen lokal (on-premise) sunucularda çalıştırılabildiği için müşteri verisi şirket dışına çıkmaz; KVKK uyumluluğu tam sağlanır.
-* **Performans & Hız:** Düşük kaliteli telefon hatlarında (8kHz) ve gürültülü ortamlarda Türkçe doğruluk oranı çok yüksektir. GPU hızlandırması ve optimize edilmiş altyapısı sayesinde çıkarım (inference) süreleri milisaniyeler seviyesindedir.
+* **Performans & Hız:** Düşük kaliteli telefon hatlarında ve gürültülü ortamlarda Türkçe doğruluk oranı çok yüksektir. GPU hızlandırması ve optimize edilmiş altyapısı sayesinde çıkarım süreleri milisaniyeler seviyesindedir.
 * **Sıfır Lisans Maliyeti:** Bulut servislerinin (Google/Azure) aksine açık kaynak kodlu ve tamamen ücretsizdir.
-
-> 💡 **Alternatif Senaryo:** Lokal donanım kısıtının bulunduğu veya bulut mimarisinin zorunlu olduğu uç durumlarda, yüksek performansları nedeniyle **Deepgram** veya **Azure Speech Service** alternatif olarak değerlendirilebilir.
-
- 
-
- 
-
  
 
 ### 🔊 3. TTS (Text To Speech) 
