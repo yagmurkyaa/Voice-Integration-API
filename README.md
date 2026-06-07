@@ -38,7 +38,7 @@ Telefon hatlarındaki düşük ses kalitesine (8kHz) ve arka plan gürültüsün
 Faster-Whisper kullanımı ile modelin çıkarım (inference) süresi oldukça kısalır ve GPU hızlandırma desteğiyle çağrı merkezi gibi yüksek trafikli sistemlerde milisaniyeler seviyesinde yanıt verebilir. 
 Bulut tabanlı çözümlerin (Google Speech-to-Text veya Azure Speech) her istek başına maliyet çıkarmasının aksine, Whisper açık kaynak kodlu ve ücretsizdir. 
 
-Alternatifler: Bulut mimarisinin zorunlu olduğu veya lokal donanım kısıtının bulunduğu uç durumlarda yüksek performansıyla bilinen Deepgram veya Azure Speech Service değerlendirilebilir. Ancak öncelikli tercihim, donanım optimizasyonu sağlandığı sürece her zaman "lokal ve ücretsiz" olması nedeniyle Whisper'dır. 
+Alternatifler : Bulut mimarisinin zorunlu olduğu veya lokal donanım kısıtının bulunduğu uç durumlarda yüksek performansıyla bilinen Deepgram veya Azure Speech Service değerlendirilebilir. Ancak öncelikli tercihim, donanım optimizasyonu sağlandığı sürece her zaman "lokal ve ücretsiz" olması nedeniyle Whisper'dır. 
 
  
 
