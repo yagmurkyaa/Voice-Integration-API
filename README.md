@@ -73,18 +73,18 @@ Projenin zeka katmanında, yapay zeka modellerini yerel bilgisayarda çalıştı
 2. Uygulama çalıştığında tarayıcınızda otomatik olarak interaktif bir test sayfası (**Swagger arayüzü**) açılacaktır.
 
 #### 🧪 API Nasıl Test Edilir?
-* **Açılan Sayfa Üzerinden (Swagger):** `http://localhost:5000/swagger` adresindeki arayüzde `POST /api/chat` endpoint'ine tıklayın. Gelen kutucuğa `{"message": "Merhaba"}` JSON içeriğini yazıp çalıştırdığınızda, yapay zekadan dönen cevabı doğrudan ekranda görebilirsiniz.
-* **Postman ile:** Postman uygulamasını açıp `POST /api/chat` adresine `{"message": "Merhaba"}` içeriğini göndererek sistemin `200 OK` yanıtı verip vermediğini doğrulayabilirsiniz.
+* **Açılan Sayfa Üzerinden (Swagger) :** `http://localhost:5000/swagger` adresindeki arayüzde `POST /api/chat` endpoint'ine tıklayın. Gelen kutucuğa `{"message": "Merhaba"}` JSON içeriğini yazıp çalıştırdığınızda, yapay zekadan dönen cevabı doğrudan ekranda görebilirsiniz.
+* **Postman ile :** Postman uygulamasını açıp `POST /api/chat` adresine `{"message": "Merhaba"}` içeriğini göndererek sistemin `200 OK` yanıtı verip vermediğini doğrulayabilirsiniz.
 
 #### 📞 Asterisk ile Nasıl Test Edilir?
-1. **Bağlantı:** Zoiper veya Linphone gibi bir Softphone (yazılımsal telefon) uygulaması ile Asterisk sunucusuna bağlanılır.
-2. **Çağrı Başlatma:** Softphone üzerinden sistemde tanımlı test numarası aranarak akış tetiklenir.
-3. **Log Takibi:** Asterisk CLI konsolu (`asterisk -vvvvr`) açılarak çağrının karşılanması (`Answer`), ses analiz betiğinin tetiklenmesi (`AGI`) ve yapay zeka yanıtının sesli okunması (`Playback`) adımları canlı loglar üzerinden anlık olarak izlenir.
+1. **Bağlantı :** Zoiper veya Linphone gibi bir Softphone (yazılımsal telefon) uygulaması ile Asterisk sunucusuna bağlanılır.
+2. **Çağrı Başlatma :** Softphone üzerinden sistemde tanımlı test numarası aranarak akış tetiklenir.
+3. **Log Takibi :** Asterisk CLI konsolu (`asterisk -vvvvr`) açılarak çağrının karşılanması (`Answer`), ses analiz betiğinin tetiklenmesi (`AGI`) ve yapay zeka yanıtının sesli okunması (`Playback`) adımları canlı loglar üzerinden anlık olarak izlenir.
 
 #### 🛠️ Kullanılan Temel Araçlar
-* **Backend:** .NET, Visual Studio 2022
-* **API Testi:** Swagger (Tarayıcı Arayüzü), Postman
-* **Telefon Entegrasyonu:** Asterisk PBX, Zoiper / Linphone (Softphone)
-* **Yapay Zeka & Ses:** OpenAI Whisper (STT), Piper (TTS), Ollama (LLM)
+* **Backend :** .NET, Visual Studio 2022
+* **API Testi :** Swagger (Tarayıcı Arayüzü), Postman
+* **Telefon Entegrasyonu :** Asterisk PBX, Zoiper / Linphone (Softphone)
+* **Yapay Zeka & Ses :** OpenAI Whisper (STT), Piper (TTS), Ollama (LLM)
 
 Yapay Zeka & Ses: OpenAI Whisper (STT), Piper (TTS), Ollama (LLM)   
