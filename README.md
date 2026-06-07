@@ -78,7 +78,7 @@ Projenin zeka katmanında, yapay zeka modellerini yerel bilgisayarda çalıştı
 
 #### 📞 Asterisk ile Nasıl Test Edilir?
 1. **Bağlantı :** Zoiper veya Linphone gibi bir Softphone (yazılımsal telefon) uygulaması ile Asterisk sunucusuna bağlanılır.
-2. **Çağrı Başlatma :** Softphone üzerinden sistemde tanımlı test numarası aranarak akış tetiklenir.
+2. **Çağrı Başlatma :** Softphone üzerinden sistemde tanımlı test numarası aranarak akış başlatılır .
 3. **Log Takibi :** Asterisk CLI konsolu (`asterisk -vvvvr`) açılarak çağrının karşılanması (`Answer`), ses analiz betiğinin tetiklenmesi (`AGI`) ve yapay zeka yanıtının sesli okunması (`Playback`) adımları canlı loglar üzerinden anlık olarak izlenir.
 
 #### 🛠️ Kullanılan Temel Araçlar
