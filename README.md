@@ -39,11 +39,11 @@ Kullanıcıdan gelen ses verisini metne dönüştürme aşamasında birincil ter
 * **Sıfır Lisans Maliyeti:** Bulut servislerinin (Google/Azure) aksine açık kaynak kodlu ve tamamen ücretsizdir.
  
 
-## 🔊 3. TTS (Text To Speech) 
+### 🔊 3. TTS (Text To Speech) 
 
 API üzerinden dönen yanıt metninin sese dönüştürülmesi sürecinde, hız ve lokal çalışma gereksinimleri doğrultusunda **Piper TTS** veya **Coqui TTS** modellerini tercih ederim.
 
-### 🎯 Neden Piper / Coqui TTS?
+## 🎯 Neden Piper / Coqui TTS?
 * **Düşük Gecikme & Performans :** Özellikle Piper TTS, minimum kaynak tüketimi ve ultra yüksek çıkarım (inference) hızı sayesinde gerçek zamanlı çağrı senaryoları için mükemmel bir optimizasyon sunar.
 * **Sıfır Operasyonel Maliyet (OPEX):** ElevenLabs gibi yüksek lisans maliyeti olan bulut çözümlerinin aksine, tamamen açık kaynaklı ve ücretsizdir.
 * **Müşteri Verisi Güvenliği :** Ses sentezleme süreci kurumun kendi lokal sunucularında tamamlanır; ses dosyaları veya müşteri verileri asla dış dünyaya sızmaz.
