@@ -33,7 +33,7 @@ Geliştirilen .NET 8 Web API'sinin bir Asterisk telefon santrali ile uçtan uca 
 
 Kullanıcıdan gelen ses verisini metne dönüştürme aşamasında birincil tercihim **OpenAI Whisper** (özellikle **Faster-Whisper** implementasyonu) yönündedir.
 
-### 🎯 Neden Faster-Whisper?
+#### 🎯 Neden Faster-Whisper?
 * **Veri Güvenliği & KVKK :** Tamamen lokal (on-premise) sunucularda çalıştırılabildiği için müşteri verisi şirket dışına çıkmaz; KVKK uyumluluğu tam sağlanır.
 * **Performans & Hız :** Düşük kaliteli telefon hatlarında ve gürültülü ortamlarda Türkçe doğruluk oranı çok yüksektir. GPU hızlandırması ve optimize edilmiş altyapısı sayesinde çıkarım süreleri milisaniyeler seviyesindedir.
 * **Sıfır Lisans Maliyeti:** Bulut servislerinin (Google/Azure) aksine açık kaynak kodlu ve tamamen ücretsizdir.
@@ -43,7 +43,7 @@ Kullanıcıdan gelen ses verisini metne dönüştürme aşamasında birincil ter
 
 API üzerinden dönen yanıt metninin sese dönüştürülmesi sürecinde, hız ve lokal çalışma gereksinimleri doğrultusunda **Piper TTS** veya **Coqui TTS** modellerini tercih ederim.
 
-### 🎯 Neden Piper / Coqui TTS?
+#### 🎯 Neden Piper / Coqui TTS?
 * **Düşük Gecikme & Performans :** Özellikle Piper TTS, minimum kaynak tüketimi ve ultra yüksek çıkarım (inference) hızı sayesinde gerçek zamanlı çağrı senaryoları için mükemmel bir optimizasyon sunar.
 * **Sıfır Operasyonel Maliyet (OPEX):** ElevenLabs gibi yüksek lisans maliyeti olan bulut çözümlerinin aksine, tamamen açık kaynaklı ve ücretsizdir.
 * **Müşteri Verisi Güvenliği :** Ses sentezleme süreci kurumun kendi lokal sunucularında tamamlanır; ses dosyaları veya müşteri verileri asla dış dünyaya sızmaz.
@@ -51,32 +51,23 @@ API üzerinden dönen yanıt metninin sese dönüştürülmesi sürecinde, hız 
 
 > 💡 **Alternatif Senaryo :** Eğer projenin önceliği maliyet veya veri gizliliği değil de tamamen "insandan ayırt edilemez ses kalitesi" ise, bulut tabanlı **ElevenLabs** mimariye entegre edilebilir. Ancak sürdürülebilirlik ve KVKK odaklı kurumsal projelerde tercihim yerel modellerdir.
  
+### 🧠 4. Yapay Zeka (LLM) Mimarisi
 
+Projenin zeka katmanında, **Ollama** ekosistemi üzerinde koşan **Llama 3** (veya donanım kısıtlarına göre **Microsoft Phi-3**) modelleri tercih edilmiştir.
+
+#### 🎯 Neden Ollama + Llama 3?
+* **%100 Yerel Çalışma (On-Premise):** Veri güvenliği ve KVKK regülasyonları gereği model tamamen şirket içi donanımda çalışır; veri asla dışarı sızmaz.
+* **Kolay .NET Entegrasyonu:** Ollama'nın sunduğu standart REST API arabirimi sayesinde, .NET 8 projemiz karmaşık kütüphanelere ihtiyaç duymadan `HttpClient` üzerinden yapay zeka ile doğrudan konuşabilir.
+* **Sıfır Token Maliyeti:** OpenAI veya Anthropic gibi bulut servislerinin aksine "token başına" ücretlendirme yoktur; mevcut donanım kaynakları verimli şekilde kullanılır.
+* **Esnek Ölçekleme:** Donanım kapasitesine göre tek bir konfigürasyon değişikliğiyle Llama 3 (yüksek performans) veya Phi-3 (düşük gecikme/hafif) modelleri arasında geçiş yapılabilir.
+
+#### 🔄 Örnek Entegrasyon Akışı
+1. **.NET API:** Gelen metni `POST http://localhost:11434/api/generate` adresine JSON olarak gönderir.
+2. **Ollama:** İsteği yakalar ve yerel GPU/CPU üzerinde modeli koşturarak yanıtı üretir.
+3. **Yanıt:** Üretilen metin, .NET katmanına anında teslim edilir.
  
 
-### 🧠 4. Yapay Zeka (LLM) 
 
-Projede yapay zeka  için tercihim Ollama ekosistemi üzerinde çalışan Llama 3 (veya kaynak yönetimine bağlı olarak Microsoft Phi-3) modelleridir. 
-
-Neden Ollama + Llama 3: 
-
- 
-
-Tam Yerelleşme (On-Premise): Veri güvenliği (KVKK) gereklilikleri nedeniyle, modelin şirket içi donanım üzerinde çalışması bir tercih değil zorunluluktur. Ollama, verinin dışarı çıkmasını %100 engeller. 
-
-Kolay Entegrasyon: Ollama, standart bir REST API arabirimi sunar. Bu, .NET 8 projemizin herhangi bir ek karmaşaya gerek kalmadan HttpClient üzerinden yapay zeka ile doğrudan konuşmasını sağlar. 
-
-Maliyet Etkinliği: OpenAI (GPT) veya Anthropic (Claude) gibi bulut tabanlı API modellerinin aksine, herhangi bir "token başına ücret" maliyeti yoktur. Şirket içi mevcut GPU/CPU kaynaklarını kullanır. 
-
-Ölçeklenebilirlik: İhtiyaca göre (donanım kapasitesine göre) Llama 3 (yüksek performans) veya Phi-3 (düşük gecikme/hafif model) gibi farklı modeller arasında tek bir konfigürasyon değişikliğiyle geçiş yapılabilir. 
-
-Örnek Entegrasyon Akışı: 
-
-.NET API: Kullanıcıdan gelen metni POST http://localhost:11434/api/generate adresine, seçilen model parametreleriyle gönderir. 
-
-Ollama: İsteği alır, yerel donanım üzerinde işler. 
-
-Yanıt: Üretilen metin yanıtı doğrudan .NET katmanına JSON formatında geri döner. 
 
  ### 🚀 5. Test ve Kurulum Süreci 
 
