@@ -66,38 +66,25 @@ Projenin zeka katmanında, yapay zeka modellerini yerel bilgisayarda çalıştı
 3. **Yanıt :** Üretilen metin, .NET katmanına anında teslim edilir.
  
 
+ ### 🚀 5. Test ve Kurulum Süreci
 
+#### 📦 Projenin Çalıştırılması
+1. Proje klasöründeki ana dosyayı **Visual Studio** ile açın ve yukarıdaki **"Çalıştır" (Run)** butonuna basın.
+2. Uygulama ayağa kalktığında tarayıcınızda otomatik olarak interaktif bir test sayfası (**Swagger arayüzü**) açılacaktır.
 
- ### 🚀 5. Test ve Kurulum Süreci 
+#### 🧪 API Nasıl Test Edilir?
+* **Açılan Sayfa Üzerinden (Swagger):** `http://localhost:5000/swagger` adresindeki arayüzde `POST /api/chat` endpoint'ine tıklayın. Gelen kutucuğa `{"message": "Merhaba"}` JSON içeriğini yazıp çalıştırdığınızda, yapay zekadan dönen cevabı doğrudan ekranda görebilirsiniz.
+* **Postman ile:** Postman uygulamasını açıp `POST /api/chat` adresine `{"message": "Merhaba"}` içeriğini göndererek sistemin `200 OK` yanıtı verip vermediğini doğrulayabilirsiniz.
 
-Uygulama Kurulumu :
+#### 📞 Asterisk ile Nasıl Test Edilir?
+1. **Bağlantı:** Zoiper veya Linphone gibi bir Softphone (yazılımsal telefon) uygulaması ile Asterisk sunucusuna bağlanılır.
+2. **Çağrı Başlatma:** Softphone üzerinden sistemde tanımlı test numarası aranarak akış tetiklenir.
+3. **Log Takibi:** Asterisk CLI konsolu (`asterisk -vvvvr`) açılarak çağrının karşılanması (`Answer`), ses analiz betiğinin tetiklenmesi (`AGI`) ve yapay zeka yanıtının sesli okunması (`Playback`) adımları canlı loglar üzerinden anlık olarak izlenir.
 
-Proje, standart .NET 8 çalışma zamanı üzerinde yapılandırılmıştır. İlk adım olarak ilgili kod deposu yerel ortama kopyalanır (clone). Proje dizininde dotnet restore komutu çalıştırılarak bağımlılıklar tamamlanır ve dotnet run komutu ile uygulama ayağa kaldırılır. API varsayılan olarak http://localhost:5000 adresinde hizmet verir. 
-
-API Test Süreci :
-
-API'nin kararlılığını test etmek için iki yöntem tercih edilir: 
-
-Swagger Arayüzü: http://localhost:5000/swagger adresi üzerinden endpointler interaktif olarak incelenebilir. 
-
-Postman: POST /api/chat adresine {"message": "Merhaba"} JSON içeriği gönderilerek sistemin 200 OK yanıtı verip vermediği doğrulanır. 
-
-Asterisk Entegrasyonu Testi :
-
-Sistemin telefon hattı üzerindeki davranışı şu şekilde doğrulanır: 
-
-Bağlantı: Zoiper veya Linphone gibi bir Softphone uygulaması ile Asterisk sunucusuna bağlanılır. 
-
-Çağrı Başlatma: Softphone üzerinden test numarası aranır. 
-
-Log Takibi: Asterisk CLI konsolu (asterisk -vvvvr) üzerinden çağrının Answer, AGI tetiklenmesi ve Playback adımları canlı olarak gözlemlenir. 
-
-Kullanılan Temel Araçlar 
-
-Backend: .NET 8, Visual Studio 2022 
-
-API Testi: Swagger, Postman 
-
-Telefon Entegrasyonu: Asterisk PBX, Zoiper (Softphone) 
+#### 🛠️ Kullanılan Temel Araçlar
+* **Backend:** .NET, Visual Studio 2022
+* **API Testi:** Swagger (Tarayıcı Arayüzü), Postman
+* **Telefon Entegrasyonu:** Asterisk PBX, Zoiper / Linphone (Softphone)
+* **Yapay Zeka & Ses:** OpenAI Whisper (STT), Piper (TTS), Ollama (LLM)
 
 Yapay Zeka & Ses: OpenAI Whisper (STT), Piper (TTS), Ollama (LLM)   
