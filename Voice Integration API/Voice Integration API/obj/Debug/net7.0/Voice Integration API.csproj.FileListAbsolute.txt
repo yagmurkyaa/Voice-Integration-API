@@ -1,0 +1,33 @@
+C:\Users\asus\source\repos\Voice Integration API\Voice Integration API\bin\Debug\net7.0\appsettings.Development.json
+C:\Users\asus\source\repos\Voice Integration API\Voice Integration API\bin\Debug\net7.0\appsettings.json
+C:\Users\asus\source\repos\Voice Integration API\Voice Integration API\bin\Debug\net7.0\Voice Integration API.exe
+C:\Users\asus\source\repos\Voice Integration API\Voice Integration API\bin\Debug\net7.0\Voice Integration API.deps.json
+C:\Users\asus\source\repos\Voice Integration API\Voice Integration API\bin\Debug\net7.0\Voice Integration API.runtimeconfig.json
+C:\Users\asus\source\repos\Voice Integration API\Voice Integration API\bin\Debug\net7.0\Voice Integration API.dll
+C:\Users\asus\source\repos\Voice Integration API\Voice Integration API\bin\Debug\net7.0\Voice Integration API.pdb
+C:\Users\asus\source\repos\Voice Integration API\Voice Integration API\bin\Debug\net7.0\Microsoft.AspNetCore.OpenApi.dll
+C:\Users\asus\source\repos\Voice Integration API\Voice Integration API\bin\Debug\net7.0\Microsoft.OpenApi.dll
+C:\Users\asus\source\repos\Voice Integration API\Voice Integration API\bin\Debug\net7.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\asus\source\repos\Voice Integration API\Voice Integration API\bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\asus\source\repos\Voice Integration API\Voice Integration API\bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\asus\source\repos\Voice Integration API\Voice Integration API\obj\Debug\net7.0\Voice Integration API.csproj.AssemblyReference.cache
+C:\Users\asus\source\repos\Voice Integration API\Voice Integration API\obj\Debug\net7.0\Voice Integration API.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\asus\source\repos\Voice Integration API\Voice Integration API\obj\Debug\net7.0\Voice Integration API.AssemblyInfoInputs.cache
+C:\Users\asus\source\repos\Voice Integration API\Voice Integration API\obj\Debug\net7.0\Voice Integration API.AssemblyInfo.cs
+C:\Users\asus\source\repos\Voice Integration API\Voice Integration API\obj\Debug\net7.0\Voice Integration API.csproj.CoreCompileInputs.cache
+C:\Users\asus\source\repos\Voice Integration API\Voice Integration API\obj\Debug\net7.0\Voice Integration API.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\asus\source\repos\Voice Integration API\Voice Integration API\obj\Debug\net7.0\Voice Integration API.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\asus\source\repos\Voice Integration API\Voice Integration API\obj\Debug\net7.0\staticwebassets\msbuild.Voice Integration API.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\asus\source\repos\Voice Integration API\Voice Integration API\obj\Debug\net7.0\staticwebassets\msbuild.build.Voice Integration API.props
+C:\Users\asus\source\repos\Voice Integration API\Voice Integration API\obj\Debug\net7.0\staticwebassets\msbuild.buildMultiTargeting.Voice Integration API.props
+C:\Users\asus\source\repos\Voice Integration API\Voice Integration API\obj\Debug\net7.0\staticwebassets\msbuild.buildTransitive.Voice Integration API.props
+C:\Users\asus\source\repos\Voice Integration API\Voice Integration API\obj\Debug\net7.0\staticwebassets.pack.json
+C:\Users\asus\source\repos\Voice Integration API\Voice Integration API\obj\Debug\net7.0\staticwebassets.build.json
+C:\Users\asus\source\repos\Voice Integration API\Voice Integration API\obj\Debug\net7.0\staticwebassets.development.json
+C:\Users\asus\source\repos\Voice Integration API\Voice Integration API\obj\Debug\net7.0\scopedcss\bundle\Voice Integration API.styles.css
+C:\Users\asus\source\repos\Voice Integration API\Voice Integration API\obj\Debug\net7.0\Voice Integration API.csproj.CopyComplete
+C:\Users\asus\source\repos\Voice Integration API\Voice Integration API\obj\Debug\net7.0\Voice Integration API.dll
+C:\Users\asus\source\repos\Voice Integration API\Voice Integration API\obj\Debug\net7.0\refint\Voice Integration API.dll
+C:\Users\asus\source\repos\Voice Integration API\Voice Integration API\obj\Debug\net7.0\Voice Integration API.pdb
+C:\Users\asus\source\repos\Voice Integration API\Voice Integration API\obj\Debug\net7.0\Voice Integration API.genruntimeconfig.cache
+C:\Users\asus\source\repos\Voice Integration API\Voice Integration API\obj\Debug\net7.0\ref\Voice Integration API.dll
