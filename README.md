@@ -70,7 +70,7 @@ Kurumsal Ölçek: Ancak sürdürülebilirlik, KVKK uyumluluğu ve maliyet yönet
 
  
 
- ###🧠 4. Yapay Zeka (LLM) 
+### 🧠 4. Yapay Zeka (LLM) 
 
 Projede yapay zeka  için tercihim Ollama ekosistemi üzerinde çalışan Llama 3 (veya kaynak yönetimine bağlı olarak Microsoft Phi-3) modelleridir. 
 
