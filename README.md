@@ -77,9 +77,15 @@ Projenin zeka katmanında, yapay zeka modellerini yerel bilgisayarda çalıştı
 * **Postman ile :** Postman uygulamasını açıp `POST /api/chat` adresine `{"message": "Merhaba"}` içeriğini göndererek sistemin `200 OK` yanıtı verip vermediğini doğrulayabilirsiniz.
 
 #### 📞 Asterisk ile Nasıl Test Edilir?
-1. **Bağlantı :** Zoiper veya Linphone gibi bir Softphone (yazılımsal telefon) uygulaması ile Asterisk sunucusuna bağlanılır.
-2. **Çağrı Başlatma :** Softphone üzerinden sistemde tanımlı test numarası aranarak akış başlatılır .
-3. **Log Takibi :** Asterisk CLI konsolu (`asterisk -vvvvr`) açılarak çağrının karşılanması (`Answer`), ses analiz betiğinin tetiklenmesi (`AGI`) ve yapay zeka yanıtının sesli okunması (`Playback`) adımları canlı loglar üzerinden anlık olarak izlenir.
+
+Sistemin telefon hattı üzerindeki tüm akışı, aşağıdaki basit adımlarla canlı olarak test edilir:
+
+1. **Telefon Bağlantısı:** Bilgisayar veya telefonunuza kurduğunuz **Zoiper** ya da **Linphone** uygulamasını, Asterisk sunucunuza bir SIP hesabı ile bağlayın.
+2. **Arama Başlatma:** Softphone (yazılımsal telefon) üzerinden sistemde tanımlanmış olan test numarasını arayın.
+3. **Sistemin Yanıt Vermesi:** Telefon açıldığında Asterisk çağrıyı karşılar; sesinizi kaydedip bizim .NET API'mize gönderir. API'den gelen cevap sese dönüştürülerek size telefon üzerinden geri okunur.
+4. **Canlı İzleme (Log Takibi):** Tüm bu sürecin (çağrının açılması, API'ye bağlanması ve sesin oynatılması) hatasız ilerlediğini görmek için Asterisk terminal ekranında şu komutu çalıştırarak logları anlık olarak izleyebilirsiniz:
+   ```bash
+   asterisk -rvvv
 
 #### 🛠️ Kullanılan Temel Araçlar
 * **Backend :** .NET, Visual Studio 2022
@@ -87,4 +93,3 @@ Projenin zeka katmanında, yapay zeka modellerini yerel bilgisayarda çalıştı
 * **Telefon Entegrasyonu :** Asterisk PBX, Zoiper / Linphone (Softphone)
 * **Yapay Zeka & Ses :** OpenAI Whisper (STT), Piper (TTS), Ollama (LLM)
 
-Yapay Zeka & Ses: OpenAI Whisper (STT), Piper (TTS), Ollama (LLM)   
