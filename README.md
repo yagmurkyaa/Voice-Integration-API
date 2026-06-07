@@ -29,16 +29,16 @@ Geliştirilen .NET 8 Web API'sinin bir Asterisk telefon santrali ile uçtan uca 
 
  
 
-### 🔬 2. STT (Speech To Text)  
+### 🔬 2. STT (Speech To Text) 
 
-Kullanıcının ses verisini metne dönüştürme aşamasında tercihim OpenAI Whisper (özellikle Faster-Whisper implementasyonu) yönündedir. 
+Kullanıcıdan gelen ses verisini metne dönüştürme aşamasında birincil tercihim **OpenAI Whisper** (özellikle **Faster-Whisper** implementasyonu) yönündedir.
 
-Verinin şirket dışına çıkmasını engeller. Bu, özellikle müşteri gizliliği ve KVKK uyumluluğu açısından en kritik tercih sebebidir. 
-Telefon hatlarındaki düşük ses kalitesine (8kHz) ve arka plan gürültüsüne rağmen, sunduğu dil modelleri Türkçe dilinde yüksek doğruluk oranı sağlar. 
-Faster-Whisper kullanımı ile modelin çıkarım (inference) süresi oldukça kısalır ve GPU hızlandırma desteğiyle çağrı merkezi gibi yüksek trafikli sistemlerde milisaniyeler seviyesinde yanıt verebilir. 
-Bulut tabanlı çözümlerin (Google Speech-to-Text veya Azure Speech) her istek başına maliyet çıkarmasının aksine, Whisper açık kaynak kodlu ve ücretsizdir. 
+### 🎯 Neden Faster-Whisper?
+* **Veri Güvenliği & KVKK:** Tamamen lokal (on-premise) sunucularda çalıştırılabildiği için müşteri verisi şirket dışına çıkmaz; KVKK uyumluluğu tam sağlanır.
+* **Performans & Hız:** Düşük kaliteli telefon hatlarında (8kHz) ve gürültülü ortamlarda Türkçe doğruluk oranı çok yüksektir. GPU hızlandırması ve optimize edilmiş altyapısı sayesinde çıkarım (inference) süreleri milisaniyeler seviyesindedir.
+* **Sıfır Lisans Maliyeti:** Bulut servislerinin (Google/Azure) aksine açık kaynak kodlu ve tamamen ücretsizdir.
 
-Alternatifler : Bulut mimarisinin zorunlu olduğu veya lokal donanım kısıtının bulunduğu uç durumlarda yüksek performansıyla bilinen Deepgram veya Azure Speech Service değerlendirilebilir. Ancak öncelikli tercihim, donanım optimizasyonu sağlandığı sürece her zaman "lokal ve ücretsiz" olması nedeniyle Whisper'dır. 
+> 💡 **Alternatif Senaryo:** Lokal donanım kısıtının bulunduğu veya bulut mimarisinin zorunlu olduğu uç durumlarda, yüksek performansları nedeniyle **Deepgram** veya **Azure Speech Service** alternatif olarak değerlendirilebilir.
 
  
 
