@@ -1,4 +1,4 @@
-  ## 📸 UYGULAMA ÇALIŞMA EKRAN GÖRÜNTÜLERİ
+  ## 📸 
 #### Bu projede, .NET 8 ve C# kullanılarak minimalist (Minimal API) mimariyle yapılandırılmış, yüksek performanslı ve hafif bir Web API geliştirilmiştir. Belirlenen endpoint üzerinden gelen mesaj isteklerine hızlı ve kararlı bir şekilde sabit yanıt dönecek altyapı kurulmuş ve Swagger entegrasyonu ile test edilebilirliği sağlanmıştır.
 
 <p align="center">
