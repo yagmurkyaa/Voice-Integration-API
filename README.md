@@ -17,11 +17,11 @@
 
 Geliştirilen .NET 8 Web API'sinin bir Asterisk telefon santrali ile uçtan uca konuşabilmesi için kurulan entegrasyon mantığı şu şekildedir : 
 
-**Çağrı Karşılama :** Dışarıdan gelen arama Asterisk santral sistemi tarafından karşılanır. Dialplan (extensions.conf) üzerinde tanımlı Answer() komutuyla hat otomatik olarak açılır ve sistem arka planda kullanıcının sesini anlık olarak kaydetmeye başlar. 
+* **Çağrı Karşılama :** Dışarıdan gelen arama Asterisk santral sistemi tarafından karşılanır. Dialplan (extensions.conf) üzerinde tanımlı Answer() komutuyla hat otomatik olarak açılır ve sistem arka planda kullanıcının sesini anlık olarak kaydetmeye başlar. 
 
-**API Çağrılması :** Kullanıcının konuşması bittiğinde, oluşan ses dosyası sesten metne (STT) dönüştürülür. Asterisk tarafındaki aracı entegrasyon betikleri (AGI veya ARI katmanı), elde edilen bu düz metni alarak bizim geliştirdiğimiz .NET 8 Minimal API endpoint'ine (/api/chat) standart bir HTTP POST isteği gönderir. 
+* **API Çağrılması :** Kullanıcının konuşması bittiğinde, oluşan ses dosyası sesten metne (STT) dönüştürülür. Asterisk tarafındaki aracı entegrasyon betikleri (AGI veya ARI katmanı), elde edilen bu düz metni alarak bizim geliştirdiğimiz .NET 8 Minimal API endpoint'ine (/api/chat) standart bir HTTP POST isteği gönderir. 
 
-**Ses Oynatma :** Bizim API katmanımızdan dönen yazılı yapay zeka yanıtı, santral tarafında Metinden Sese (TTS) motoruna bir ses dosyasına (.wav) dönüştürülür. Asterisk bu ses dosyasını Playback() veya Background() komutları vasıtasıyla hattaki kullanıcıya dinletir ve akış akıcı bir şekilde devam eder. 
+* **Ses Oynatma :** Bizim API katmanımızdan dönen yazılı yapay zeka yanıtı, santral tarafında Metinden Sese (TTS) motoruna bir ses dosyasına (.wav) dönüştürülür. Asterisk bu ses dosyasını Playback() veya Background() komutları vasıtasıyla hattaki kullanıcıya dinletir ve akış akıcı bir şekilde devam eder. 
 
  
 
@@ -43,7 +43,7 @@ Kullanıcıdan gelen ses verisini metne dönüştürme aşamasında birincil ter
 
 API üzerinden dönen yanıt metninin sese dönüştürülmesi sürecinde, hız ve lokal çalışma gereksinimleri doğrultusunda **Piper TTS** veya **Coqui TTS** modellerini tercih ederim.
 
-## 🎯 Neden Piper / Coqui TTS?
+### 🎯 Neden Piper / Coqui TTS?
 * **Düşük Gecikme & Performans :** Özellikle Piper TTS, minimum kaynak tüketimi ve ultra yüksek çıkarım (inference) hızı sayesinde gerçek zamanlı çağrı senaryoları için mükemmel bir optimizasyon sunar.
 * **Sıfır Operasyonel Maliyet (OPEX):** ElevenLabs gibi yüksek lisans maliyeti olan bulut çözümlerinin aksine, tamamen açık kaynaklı ve ücretsizdir.
 * **Müşteri Verisi Güvenliği :** Ses sentezleme süreci kurumun kendi lokal sunucularında tamamlanır; ses dosyaları veya müşteri verileri asla dış dünyaya sızmaz.
