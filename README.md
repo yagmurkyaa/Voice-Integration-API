@@ -29,7 +29,7 @@ Ses Nasıl Oynatılır?: Bizim API katmanımızdan dönen yazılı yapay zeka ya
 
  
 
-🔬 2. STT (Speech To Text)  
+### 🔬 2. STT (Speech To Text)  
 
 Kullanıcının ses verisini metne dönüştürme aşamasında tercihim OpenAI Whisper (özellikle Faster-Whisper implementasyonu) yönündedir. 
 
@@ -51,7 +51,7 @@ Alternatifler: Bulut mimarisinin zorunlu olduğu veya lokal donanım kısıtın�
 
  
 
-🔊 3. TTS (Text To Speech) 
+### 🔊 3. TTS (Text To Speech) 
 
 API üzerinden dönen metnin seslendirilmesi sürecinde, sistemin hız ve lokal çalışma gereksinimlerine göre Piper TTS veya Coqui TTS modellerini tercih ederim. 
 
@@ -75,7 +75,7 @@ Kurumsal Ölçek: Ancak sürdürülebilirlik, KVKK uyumluluğu ve maliyet yönet
 
  
 
-🧠 4. Yapay Zeka (LLM) 
+ ###🧠 4. Yapay Zeka (LLM) 
 
 Projede yapay zeka  için tercihim Ollama ekosistemi üzerinde çalışan Llama 3 (veya kaynak yönetimine bağlı olarak Microsoft Phi-3) modelleridir. 
 
@@ -99,7 +99,7 @@ Ollama: İsteği alır, yerel donanım üzerinde işler.
 
 Yanıt: Üretilen metin yanıtı doğrudan .NET katmanına JSON formatında geri döner. 
 
-🚀 5. Test ve Kurulum Süreci 
+ ### 🚀 5. Test ve Kurulum Süreci 
 
 Uygulama Kurulumu :
 
