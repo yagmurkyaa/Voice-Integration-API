@@ -13,11 +13,11 @@
 </p>
 
 
-###🛠️ 1. Asterisk Entegrasyonu  
+### 🛠️ 1. Asterisk Entegrasyonu  
 
 Geliştirilen .NET 8 Web API'sinin bir Asterisk telefon santrali ile uçtan uca konuşabilmesi için kurulan entegrasyon mantığı şu şekildedir: 
 
-**Çağrı Nasıl Karşılanır?: ** Dışarıdan gelen arama Asterisk santral sistemi tarafından karşılanır. Dialplan (extensions.conf) üzerinde tanımlı Answer() komutuyla hat otomatik olarak açılır ve sistem arka planda kullanıcının sesini anlık olarak kaydetmeye başlar. 
+**Çağrı Nasıl Karşılanır?:** Dışarıdan gelen arama Asterisk santral sistemi tarafından karşılanır. Dialplan (extensions.conf) üzerinde tanımlı Answer() komutuyla hat otomatik olarak açılır ve sistem arka planda kullanıcının sesini anlık olarak kaydetmeye başlar. 
 
 **API Nasıl Çağrılır?: ** Kullanıcının konuşması bittiğinde, oluşan ses dosyası sesten metne (STT) dönüştürülür. Asterisk tarafındaki aracı entegrasyon betikleri (AGI veya ARI katmanı), elde edilen bu düz metni alarak bizim geliştirdiğimiz .NET 8 Minimal API endpoint'ine (/api/chat) standart bir HTTP POST isteği gönderir. 
 
