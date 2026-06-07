@@ -15,7 +15,7 @@
 
 ### 🛠️ 1. Asterisk Entegrasyonu  
 
-Geliştirilen .NET 8 Web API'sinin bir Asterisk telefon santrali ile uçtan uca konuşabilmesi için kurulan entegrasyon mantığı şu şekildedir: 
+Geliştirilen .NET 8 Web API'sinin bir Asterisk telefon santrali ile uçtan uca konuşabilmesi için kurulan entegrasyon mantığı şu şekildedir : 
 
 **Çağrı Karşılama :** Dışarıdan gelen arama Asterisk santral sistemi tarafından karşılanır. Dialplan (extensions.conf) üzerinde tanımlı Answer() komutuyla hat otomatik olarak açılır ve sistem arka planda kullanıcının sesini anlık olarak kaydetmeye başlar. 
 
@@ -33,15 +33,10 @@ Geliştirilen .NET 8 Web API'sinin bir Asterisk telefon santrali ile uçtan uca 
 
 Kullanıcının ses verisini metne dönüştürme aşamasında tercihim OpenAI Whisper (özellikle Faster-Whisper implementasyonu) yönündedir. 
 
-Neden Whisper: 
-
-Lokal ve Güvenli (On-Premise): Verinin şirket dışına çıkmasını engeller. Bu, özellikle müşteri gizliliği ve KVKK uyumluluğu açısından en kritik tercih sebebidir. 
-
-Başarılı Türkçe Performansı: Telefon hatlarındaki düşük ses kalitesine (8kHz) ve arka plan gürültüsüne rağmen, sunduğu dil modelleri Türkçe dilinde yüksek doğruluk oranı sağlar. 
-
-Optimize Edilmiş Performans: Faster-Whisper kullanımı ile modelin çıkarım (inference) süresi oldukça kısalır ve GPU hızlandırma desteğiyle çağrı merkezi gibi yüksek trafikli sistemlerde milisaniyeler seviyesinde yanıt verebilir. 
-
-Maliyet Yönetimi: Bulut tabanlı çözümlerin (Google Speech-to-Text veya Azure Speech) her istek başına maliyet çıkarmasının aksine, Whisper açık kaynak kodlu ve ücretsizdir. 
+Verinin şirket dışına çıkmasını engeller. Bu, özellikle müşteri gizliliği ve KVKK uyumluluğu açısından en kritik tercih sebebidir. 
+Başarılı Türkçe  Telefon hatlarındaki düşük ses kalitesine (8kHz) ve arka plan gürültüsüne rağmen, sunduğu dil modelleri Türkçe dilinde yüksek doğruluk oranı sağlar. 
+Faster-Whisper kullanımı ile modelin çıkarım (inference) süresi oldukça kısalır ve GPU hızlandırma desteğiyle çağrı merkezi gibi yüksek trafikli sistemlerde milisaniyeler seviyesinde yanıt verebilir. 
+Bulut tabanlı çözümlerin (Google Speech-to-Text veya Azure Speech) her istek başına maliyet çıkarmasının aksine, Whisper açık kaynak kodlu ve ücretsizdir. 
 
 Alternatifler: Bulut mimarisinin zorunlu olduğu veya lokal donanım kısıtının bulunduğu uç durumlarda yüksek performansıyla bilinen Deepgram veya Azure Speech Service değerlendirilebilir. Ancak öncelikli tercihim, donanım optimizasyonu sağlandığı sürece her zaman "lokal ve ücretsiz" olması nedeniyle Whisper'dır. 
 
