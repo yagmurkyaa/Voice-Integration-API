@@ -8,32 +8,32 @@ builder.Services.AddSwaggerGen(options =>
     {
         Title = "VoiceIntegrationAPI",
         Version = "v1",
-        Description = "Ses ve santral sistemlerine (Asterisk, TTS/STT) entegrasyon için tasarlanmýþ merkezi mesaj simülatörü."
+        Description = "Ses ve santral sistemlerine (Asterisk, TTS/STT) entegrasyon iÃ§in tasarlanmÄ±ÅŸ merkezi mesaj simÃ¼latÃ¶rÃ¼."
     });
 });
 
 var app = builder.Build();
 
-// Test ekranýný aktif hale getiriyoruz
+// Test ekranÄ±nÄ± aktif hale getiriyoruz
 app.UseSwagger();
 app.UseSwaggerUI(options =>
 {
     options.SwaggerEndpoint("/swagger/v1/swagger.json", "VoiceIntegrationAPI v1");
 });
 
-// Ýstek buraya gelecek: POST /api/chat
+// istek buraya gelecek: POST /api/chat
 app.MapPost("/api/chat", (ChatRequest istek) =>
 {
-    // Boþ mesaj gönderilirse hata dönme kontrolü
+    // BoÅŸ mesaj gÃ¶nderilirse hata dÃ¶nme kontrolÃ¼
     if (string.IsNullOrWhiteSpace(istek.Message))
     {
-        return Results.BadRequest(new { error = "Mesaj alaný boþ olamaz." });
+        return Results.BadRequest(new { error = "Mesaj alanÄ± boÅŸ olamaz." });
     }
 
     // 
     var cevap = new ChatResponse
     {
-        Response = "Merhaba, size nasýl yardýmcý olabilirim?"
+        Response = "Merhaba, size nasÄ±l yardÄ±mcÄ± olabilirim?"
     };
 
     return Results.Ok(cevap);
@@ -41,6 +41,6 @@ app.MapPost("/api/chat", (ChatRequest istek) =>
 
 app.Run();
 
-// Ýstek ve cevap 
+// istek ve cevap 
 public record ChatRequest(string Message);
 public record ChatResponse { public string Response { get; set; } = string.Empty; }
