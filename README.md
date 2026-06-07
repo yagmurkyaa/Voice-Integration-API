@@ -34,7 +34,7 @@ Geliştirilen .NET 8 Web API'sinin bir Asterisk telefon santrali ile uçtan uca 
 Kullanıcının ses verisini metne dönüştürme aşamasında tercihim OpenAI Whisper (özellikle Faster-Whisper implementasyonu) yönündedir. 
 
 Verinin şirket dışına çıkmasını engeller. Bu, özellikle müşteri gizliliği ve KVKK uyumluluğu açısından en kritik tercih sebebidir. 
-Başarılı Türkçe  Telefon hatlarındaki düşük ses kalitesine (8kHz) ve arka plan gürültüsüne rağmen, sunduğu dil modelleri Türkçe dilinde yüksek doğruluk oranı sağlar. 
+Telefon hatlarındaki düşük ses kalitesine (8kHz) ve arka plan gürültüsüne rağmen, sunduğu dil modelleri Türkçe dilinde yüksek doğruluk oranı sağlar. 
 Faster-Whisper kullanımı ile modelin çıkarım (inference) süresi oldukça kısalır ve GPU hızlandırma desteğiyle çağrı merkezi gibi yüksek trafikli sistemlerde milisaniyeler seviyesinde yanıt verebilir. 
 Bulut tabanlı çözümlerin (Google Speech-to-Text veya Azure Speech) her istek başına maliyet çıkarmasının aksine, Whisper açık kaynak kodlu ve ücretsizdir. 
 
