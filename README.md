@@ -39,26 +39,17 @@ Kullanıcıdan gelen ses verisini metne dönüştürme aşamasında birincil ter
 * **Sıfır Lisans Maliyeti:** Bulut servislerinin (Google/Azure) aksine açık kaynak kodlu ve tamamen ücretsizdir.
  
 
-### 🔊 3. TTS (Text To Speech) 
+## 🔊 3. TTS (Text To Speech) 
 
-API üzerinden dönen metnin seslendirilmesi sürecinde, sistemin hız ve lokal çalışma gereksinimlerine göre Piper TTS veya Coqui TTS modellerini tercih ederim. 
+API üzerinden dönen yanıt metninin sese dönüştürülmesi sürecinde, hız ve lokal çalışma gereksinimleri doğrultusunda **Piper TTS** veya **Coqui TTS** modellerini tercih ederim.
 
-Neden Piper/Coqui TTS : 
+### 🎯 Neden Piper / Coqui TTS?
+* **Düşük Gecikme & Performans:** Özellikle Piper TTS, minimum kaynak tüketimi ve ultra yüksek çıkarım (inference) hızı sayesinde gerçek zamanlı çağrı senaryoları için mükemmel bir optimizasyon sunar.
+* **Sıfır Operasyonel Maliyet (OPEX):** ElevenLabs gibi yüksek lisans maliyeti olan bulut çözümlerinin aksine, tamamen açık kaynaklı ve ücretsizdir.
+* **Müşteri Verisi Güvenliği:** Ses sentezleme süreci kurumun kendi lokal sunucularında tamamlanır; ses dosyaları veya müşteri verileri asla dış dünyaya sızmaz.
+* **Doğal Türkçe Desteği:** Modellerin güncel Türkçe ses setleri, telefon hatlarının kısıtlı frekans aralığında bile oldukça doğal, akıcı ve anlaşılır bir sentezleme sağlar.
 
-Lokal Performans ve Düşük Gecikme: Özellikle Piper TTS, çok düşük kaynak tüketimi ve yüksek çıkarım hızıyla gerçek zamanlı çağrı merkezi senaryoları için  optimize edilmiştir. 
-
-Tamamen Açık Kaynak ve Maliyetsiz: ElevenLabs gibi bulut tabanlı, lisans maliyetleri yüksek olan çözümler yerine, tamamen ücretsiz ve açık kaynaklı modeller kullanarak projenin operasyonel maliyetini (OPEX) sıfıra indirir. 
-
-Veri Güvenliği (Data Sovereignty): Ses sentezleme süreci tamamen kurumun kendi sunucularında gerçekleşir; müşteri verisi veya üretilen ses yanıtları hiçbir dış servise (API dışına) gönderilmez. 
-
-Türkçe Dil Desteği: Güncel açık kaynaklı modeller (özellikle Piper ve Coqui'nin Türkçe ses setleri), telefon hatlarının sınırlı ses frekans aralığında bile oldukça doğal ve anlaşılır bir sentezleme sunmaktadır. 
-
-Alternatifler ve Kıyaslama: 
-
-Kalite Odaklı Yaklaşım: Eğer sistemin önceliği maliyet değil de "insandan ayırt edilemez ses kalitesi" ise, bulut tabanlı ElevenLabs gibi üst düzey çözümler entegre edilebilir. 
-
-Kurumsal Ölçek: Ancak sürdürülebilirlik, KVKK uyumluluğu ve maliyet yönetimi odaklı projelerde, yerel çalışabilen Piper veya Coqui TTS her zaman stratejik tercihimdir. 
-
+> 💡 **Alternatif Senaryo:** Eğer projenin önceliği maliyet veya veri gizliliği değil de tamamen "insandan ayırt edilemez ses kalitesi" ise, bulut tabanlı **ElevenLabs** mimariye entegre edilebilir. Ancak sürdürülebilirlik ve KVKK odaklı kurumsal projelerde tercihim yerel modellerdir.
  
 
  
