@@ -35,7 +35,7 @@ Kullanıcıdan gelen ses verisini metne dönüştürme aşamasında birincil ter
 
 #### 🎯 Neden Faster-Whisper?
 * **Veri Güvenliği & KVKK :** Tamamen lokal (on-premise) sunucularda çalıştırılabildiği için müşteri verisi şirket dışına çıkmaz; KVKK uyumluluğu tam sağlanır.
-* **Performans & Hız :** Düşük kaliteli telefon hatlarında ve gürültülü ortamlarda Türkçe doğruluk oranı çok yüksektir. GPU hızlandırması ve optimize edilmiş altyapısı sayesinde çıkarım süreleri milisaniyeler seviyesindedir.
+* **Performans & Hız :** Düşük kaliteli telefon hatlarında ve gürültülü ortamlarda Türkçe doğruluk oranı çok yüksektir. GPU hızlandırması ve optimize edilmiş altyapısı sayesinde çıkarım süreleri düşük gecikmeli çalışır.
 * **Sıfır Lisans Maliyeti:** Bulut servislerinin (Google/Azure) aksine açık kaynak kodlu ve tamamen ücretsizdir.
  
 
@@ -44,7 +44,7 @@ Kullanıcıdan gelen ses verisini metne dönüştürme aşamasında birincil ter
 API üzerinden dönen yanıt metninin sese dönüştürülmesi sürecinde, hız ve lokal çalışma gereksinimleri doğrultusunda **Piper TTS** veya **Coqui TTS** modellerini tercih ederim.
 
 #### 🎯 Neden Piper / Coqui TTS?
-* **Düşük Gecikme & Performans :** Özellikle Piper TTS, minimum kaynak tüketimi ve ultra yüksek çıkarım (inference) hızı sayesinde gerçek zamanlı çağrı senaryoları için mükemmel bir optimizasyon sunar.
+* **Düşük Gecikme & Performans :** Özellikle Piper TTS, minimum kaynak tüketimi ve ultra yüksek çıkarım (inference) hızı sayesinde gerçek zamanlı çağrı senaryoları yüksek performans sunar.
 * **Sıfır Operasyonel Maliyet (OPEX):** ElevenLabs gibi yüksek lisans maliyeti olan bulut çözümlerinin aksine, tamamen açık kaynaklı ve ücretsizdir.
 * **Müşteri Verisi Güvenliği :** Ses sentezleme süreci kurumun kendi lokal sunucularında tamamlanır; ses dosyaları veya müşteri verileri asla dış dünyaya sızmaz.
 * **Doğal Türkçe Desteği :** Modellerin güncel Türkçe ses setleri, telefon hatlarının kısıtlı frekans aralığında bile oldukça doğal, akıcı ve anlaşılır bir sentezleme sağlar.
@@ -56,7 +56,7 @@ API üzerinden dönen yanıt metninin sese dönüştürülmesi sürecinde, hız 
 Projenin zeka katmanında, yapay zeka modellerini yerel bilgisayarda çalıştırmayı sağlayan **Ollama** altyapısı ve akıllı yanıt motoru olarak da **Llama 3** (veya donanım kısıtlarına göre daha hafif olan **Microsoft Phi-3**) modeli tercih ederdim. 
 
 #### 🎯 Neden Ollama + Llama 3?
-* **%100 Yerel Çalışma (On-Premise) :** Veri güvenliği ve KVKK regülasyonları gereği model tamamen şirket içi donanımda çalışır ; veri asla dışarı sızmaz.
+* **Yerel Çalışma (On-Premise) :** Veri güvenliği ve KVKK regülasyonları gereği model tamamen şirket içi donanımda çalışır ; veri asla dışarı sızmaz.
 * **Kolay .NET Entegrasyonu :** Ollama'nın sunduğu standart REST API arabirimi sayesinde, .NET 8 projemiz karmaşık kütüphanelere ihtiyaç duymadan `HttpClient` üzerinden yapay zeka ile doğrudan konuşabilir.
 * **Sıfır Token Maliyeti :** OpenAI veya Anthropic gibi bulut servislerinin aksine "token başına" ücretlendirme yoktur ; mevcut donanım kaynakları verimli şekilde kullanılır.
 
