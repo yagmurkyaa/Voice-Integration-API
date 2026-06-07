@@ -70,7 +70,7 @@ Projenin zeka katmanında, yapay zeka modellerini yerel bilgisayarda çalıştı
 
 #### 📦 Projenin Çalıştırılması
 1. Proje klasöründeki ana dosyayı **Visual Studio** ile açın ve yukarıdaki **"Çalıştır" (Run)** butonuna basın.
-2. Uygulama ayağa kalktığında tarayıcınızda otomatik olarak interaktif bir test sayfası (**Swagger arayüzü**) açılacaktır.
+2. Uygulama çalıştığında tarayıcınızda otomatik olarak interaktif bir test sayfası (**Swagger arayüzü**) açılacaktır.
 
 #### 🧪 API Nasıl Test Edilir?
 * **Açılan Sayfa Üzerinden (Swagger):** `http://localhost:5000/swagger` adresindeki arayüzde `POST /api/chat` endpoint'ine tıklayın. Gelen kutucuğa `{"message": "Merhaba"}` JSON içeriğini yazıp çalıştırdığınızda, yapay zekadan dönen cevabı doğrudan ekranda görebilirsiniz.
